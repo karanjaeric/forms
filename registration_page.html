@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration_page.css" />
+
+</head>
+
+<body>
+    <div>
+        <h2>Registration Form</h2>
+
+        <form id="registrationForm">
+
+            <input type="text" id="firstName" placeholder="First Name" />
+            <br />
+            <input type="text" id="secondName" placeholder="Second Name" required />
+            <br />
+            <input type="text" id="lastName" placeholder="Last Name" />
+            <br />
+            <input type="number" id="age" placeholder="age" />
+            <br />
+            <select id="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="N/A">Undefined</option>
+            </select>
+            <br />
+            <input type="email" id="email" placeholder="Email Address"  />
+            <br />
+            <input type="submit""/>
+
+
+        </form>
+
+
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit",function(event){
+
+            formSubmit(event)
+        });
+
+        function formSubmit(event){
+            event.preventDefault();
+            
+            var firstName = document.getElementById("firstName").value;
+            var secondName = document.getElementById("secondName").value;
+            var lastName = document.getElementById("lastName").value;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+            var gender = document.getElementById("gender").value;
+            console.log(" First Name:"+firstName)
+            console.log(" Second Name:"+secondName)
+            console.log(" Age:"+age)
+            console.log(" Gender:"+gender)
+
+        }
+
+
+    </script>
+</body>
+
+</html>
